@@ -48,7 +48,7 @@ test('User facing locators', async({page}) => {
     //await page.getByTitle('IoT Dashboard').click();
 
     await page.getByTestId('SignIn').click();
-})
+});
 
 test('Locating child elements', async({page}) => {
     await page.locator('nb-card nb-radio :text-is("Option 1")').click();
@@ -70,4 +70,4 @@ test('Locating parent elements', async({page}) => {
         .getByRole('textbox', {name: "Password"}).click();
 
     await page.locator(':text-is("Using the Grid")').locator('..').getByRole('textbox', {name: "Email"}).click();
-})
+});
