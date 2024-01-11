@@ -25,7 +25,7 @@ test('parametrized methods @smoke', async ({page}) => {
     await pm.onFormLayoutsPage().submitUsingTheGridFormWithCredentialsAndSelectOption(process.env.USERNAME, process.env.PASSWORD, 'Option 2');
     await page.screenshot({path: 'screenshots/formsLayoutsPage.png'});
     const buffer = await page.screenshot();
-    console.log(buffer.toString('base64'));
+    //console.log(buffer.toString('base64'));
     await pm.onFormLayoutsPage().submitInlineFormWithNameEmailAndCheckbox(randomFullName, randomEmail, false);
     await page.locator('nb-card', {hasText: "Inline form"}).screenshot({path: 'screenshots/inlineForm.png'});
 
